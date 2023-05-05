@@ -1,0 +1,38 @@
+  // mixin for margin and padding utilities
+  @mixin space($property, $values...) {
+      @each $value in $values {
+        #{$property}: $value;
+      }
+    }
+  
+  // generate margin utility classes
+  @each $dir in (top, right, bottom, left) {
+    @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) {
+      .m#{$dir}-#{$size} {
+        @include space(margin-#{$dir}, #{$size}px);
+      }
+    }
+  }
+  
+  // generate padding utility classes
+  @each $dir in (top, right, bottom, left) {
+    @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) {
+      .p#{$dir}-#{$size} {
+        @include space(padding-#{$dir}, #{$size}px);
+      }
+    }
+  }
+  
+$grid-columns: 12;
+$gutter-width: 30px;
+
+
+//grid 
+
+@each $value in (0,1,2,3,4,5,6,7,8,9,10,11,12) {
+  .grid-#{$value}{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat($value , 1fr)
+  }
+}

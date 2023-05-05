@@ -1,0 +1,15 @@
+.panel{
+    &__nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-block: 30px;
+        &-item{}
+        &-link {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 28px;
+            color: #4B4B4B;
+        }
+    }
+}

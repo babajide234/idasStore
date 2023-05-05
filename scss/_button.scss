@@ -1,0 +1,35 @@
+.btn{
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    
+    &__default{
+        background: $secondary-90;
+        color: $neutral_white;
+        border: 1.5px solid transparent;
+
+        &:hover{
+            cursor: pointer;
+            background: $neutral_silver;
+            color: $secondary-90;
+            border: 1.5px solid $secondary-90;
+
+        }
+    }
+    &__outline{
+        background: transparent;
+        border: 1.5px solid $secondary-90;
+        color: $secondary-90;
+
+        &:hover{
+            cursor: pointer;
+            background: $secondary-90;
+            color: $neutral_white;
+            border: 1.5px solid transparent;
+
+        }
+    }
+}
