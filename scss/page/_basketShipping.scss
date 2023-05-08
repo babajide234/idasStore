@@ -1,0 +1,48 @@
+.checkout {
+  margin-top: 83px;
+
+  &__container {
+    display: flex;
+  }
+  &__shipping {
+    flex: 1;
+
+    &-detail {
+      width: 90%;
+    }
+  }
+  &__form {
+    &-label {
+      display: flex;
+      margin-block: 20px;
+      padding: 24px 16px;
+      border-radius: 8px;
+
+      & input {
+        margin-inline: 24px;
+      }
+
+      &:hover{
+        background-color: #FBD1CD;
+        border: 1px solid $secondary-40;
+      }
+    }
+  }
+  &__summary {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &-container{
+        width: 50%;
+    }
+
+    &-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }
+  }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topbar">
+        <div class="header__topbar-container">
+          <div class="header__topbar-location">
+            <h2 class="headline-body">(225) 555-0118</h2>
+            <h2 class="headline-body">idasbeautyworld@gmail.com</h2>
+          </div>
+          <div class="header__topbar-follow">
+            <p class="headline-body">
+              Follow Us and get a chance to win 80% off
+            </p>
+          </div>
+          <div class="header__topbar-social">
+            <h3 class="headline-body">Follow Us :</h3>
+          </div>
+        </div>
+      </div>
+      <nav class="header__mainnav">
+        <div class="header__mainnav-container">
+          <a href="" class="header__mainnav-logo headline-logo">IDA'S BEAUTY</a>
+
+          <ul class="header__mainnav-menu">
+            <li class=""><a href="" class="headline-body">Home</a></li>
+            <li class=""><a href="" class="headline-body">All Products</a></li>
+            <li class=""><a href="" class="headline-body">Categories</a></li>
+            <li class=""><a href="" class="headline-body">About Us</a></li>
+            <li class=""><a href="" class="headline-body">Contact Us</a></li>
+          </ul>
+
+          <div class="">
+            <ul class="">
+              <li class="">
+                <a href="" class="">
+                  <i class="fa-thin fa-user"></i> Login / Register</a
+                >
+              </li>
+              <li class=""><a href="" class=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="address">
+      <div class="address__container container-small">
+        <div class="address__left">
+          <img src="./img/fixing hair 1.png" alt=" fixing hair image" />
+        </div>
+        <div class="address__right">
+          <div id="map"></div>
+          <div class="address__text">
+            <div class="mbottom-25 address__common">
+              <p class="mbottom-15">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="address__span-address headline-sub"
+                  >901 E Wright St Milwaukee, WI 53212.</span
+                >
+              </p>
+              <p>
+                <span class="headline-body">
+                  <i class="fa-solid fa-phone"></i>
+                  (225) 555-0118
+                </span>
+                <span class="headline-body address__email">
+                  <i class="fa-solid fa-envelope"></i>
+                  idasbeautyworld@gmail.com
+                </span>
+              </p>
+            </div>
+            <div class="address__common">
+              <p class="mbottom-10">
+                <span class="md-normal">Opening :</span>
+                <span class="md-md">9am Mon - Fri</span>
+              </p>
+              <p>
+                <span class="md-normal">Closing :</span>
+                <span class="md-md">10pm Mon - Fri</span>
+              </p>
+            </div>
+          </div>
+          <div class="address__btn">
+            <button class="btn btn__default">Book Appointment</button>
+            <button class="btn btn__outline">My Bookings</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="staff">
+      <div class="staff__container container-small">
+        <div class="service__header">
+          <a href="/" class="">
+            <span class="headline-4 service__link"> Service </span>
+          </a>
+          <a href="/">
+            <span class="headline-4 service__link">Staffs</span>
+          </a>
+        </div>
+        <div class="staff__card grid-1">
+          <div class="staff__card-container">
+            <div class="staff__card-text">
+              <p class="staff__card-name mbottom-20 body-semibold">Samantha</p>
+              <p class="staff__container-desc mbottom-50 headline-body">
+                Lorem ipsum dolor sit amet consectetur. Pretium amet volutpat
+                eleifend in volutpat pretium. Gravida sed congue vel quisque mi
+                adipiscing lacus vitae. Tortor quis velit felis imperdiet mi.
+                Hac sagittis in ornare leo.
+              </p>
+              <a href="/"
+                ><span class="body-semibold secondary-40">BOOK NOW</span></a
+              >
+            </div>
+            <div class="staff__card-img">
+              <div class="staff__card-img-cont">
+                <img src="./img/hair 27.png" alt="samanthat" />
+              </div>
+            </div>
+          </div>
+          <div class="staff__card-container">
+            <div class="staff__card-text">
+              <p class="staff__card-name mbottom-20 body-semibold">Samantha</p>
+              <p class="staff__container-desc mbottom-50 headline-body">
+                Lorem ipsum dolor sit amet consectetur. Pretium amet volutpat
+                eleifend in volutpat pretium. Gravida sed congue vel quisque mi
+                adipiscing lacus vitae. Tortor quis velit felis imperdiet mi.
+                Hac sagittis in ornare leo.
+              </p>
+              <a href="/"
+                ><span class="body-semibold secondary-40">BOOK NOW</span></a
+              >
+            </div>
+            <div class="staff__card-img">
+              <div class="staff__card-img-cont">
+                <img src="./img/hair 27.png" alt="samanthat" />
+              </div>
+            </div>
+          </div>
+          <div class="staff__card-container">
+            <div class="staff__card-text">
+              <p class="staff__card-name mbottom-20 body-semibold">Samantha</p>
+              <p class="staff__container-desc mbottom-50 headline-body">
+                Lorem ipsum dolor sit amet consectetur. Pretium amet volutpat
+                eleifend in volutpat pretium. Gravida sed congue vel quisque mi
+                adipiscing lacus vitae. Tortor quis velit felis imperdiet mi.
+                Hac sagittis in ornare leo.
+              </p>
+              <a href="/"
+                ><span class="body-semibold secondary-40">BOOK NOW</span></a
+              >
+            </div>
+            <div class="staff__card-img">
+              <div class="staff__card-img-cont">
+                <img src="./img/hair 27.png" alt="samanthat" />
+              </div>
+            </div>
+          </div>
+          <div class="staff__card-container">
+            <div class="staff__card-text">
+              <p class="staff__card-name mbottom-20 body-semibold">Samantha</p>
+              <p class="staff__container-desc mbottom-50 headline-body">
+                Lorem ipsum dolor sit amet consectetur. Pretium amet volutpat
+                eleifend in volutpat pretium. Gravida sed congue vel quisque mi
+                adipiscing lacus vitae. Tortor quis velit felis imperdiet mi.
+                Hac sagittis in ornare leo.
+              </p>
+              <a href="/"
+                ><span class="body-semibold secondary-40">BOOK NOW</span></a
+              >
+            </div>
+            <div class="staff__card-img">
+              <div class="staff__card-img-cont">
+                <img src="./img/hair 27.png" alt="samanthat" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__container-ida">
+          <h3 class="headline-tag mbottom-25">IDA'S BEAUTY</h3>
+          <p class="headline-3">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore voluptua. At vero eos.
+          </p>
+          <div class="footer__container-ida-links">
+            <a href="/">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="/">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__container-grid grid-3">
+          <div class="footer__container-common">
+            <h3 class="medium-bold mbottom-25">Information Company</h3>
+
+            <p class="headline-3">About us</p>
+            <p class="headline-3">Our impact</p>
+            <p class="headline-3">Digital Payment</p>
+            <p class="headline-3">Member</p>
+            <p class="headline-3">Terms and Condition</p>
+          </div>
+          <div class="footer__container-common">
+            <h3 class="medium-bold mbottom-25">Account</h3>
+
+            <p class="headline-3">FAQ</p>
+            <p class="headline-3">Track your order</p>
+            <p class="headline-3">Return & refund</p>
+            <p class="headline-3">Take our feedback</p>
+            <p class="headline-3">Contact us</p>
+          </div>
+          <div class="footer__container-common">
+            <h3 class="medium-bold mbottom-25">Info</h3>
+            <p class="headline-3">terms & conditions</p>
+            <p class="headline-3">privacy policy</p>
+            <p class="headline-3">sitemap privacy</p>
+            <p class="headline-3">policy sitemap</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

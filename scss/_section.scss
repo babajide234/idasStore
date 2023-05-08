@@ -1,82 +1,276 @@
+.features {
+  padding-block: 60px;
+  &__container {
+    padding-inline: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-.features{
-    padding-block: 60px;
-    &__container{
-        padding-inline: 180px;
-        display: flex;
-        justify-content: space-between;
+  &__card {
+    display: flex;
+    align-items: flex-start;
+    img {
+      margin-right: 20px;
     }
-
-    &__card{
-        display: flex;
-        align-items: flex-start;
-        img{
-            margin-right: 20px;
-        }
-        &-text{
-            h3{
-                font-size: 16px;
-                color: #232323;
-            }
-            p{
-                font-size: 14px;
-                color: #707070;
-            }
-        }
+    &-text {
+      h3 {
+        font-size: 16px;
+        color: #232323;
+      }
+      p {
+        font-size: 14px;
+        color: #707070;
+      }
     }
+  }
 }
 
-.discount{
-    &__container{
-        padding-inline: 180px;
-        display: flex;
-        justify-content: space-between;
+.discount {
+  &__container {
+    padding-inline: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    display: flex;
+    &-one {
+      flex: 1.1;
+      background: $card-primary;
+      img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+      }
     }
-    &__card{
-        display: flex;
-        &-one{
-            flex: 1.1;
-            background: $card-primary;
-            img{
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 70%;
-            }
-        }
-        &-two{
-            flex: .9;
-            background: $card-nuetral;
+    &-two {
+      flex: 0.9;
+      background: $card-nuetral;
 
-            img{
-                width: 100%;
-                position: absolute;
-                bottom: 0;
-                z-index: 1;
-            }
-        }
-        &-one, &-two{
-            padding: 40px 30px;
-            height: 500px;
-            overflow: hidden;
-            position: relative;
-
-        }
-    }
-}
-
-.store{
-    &__container{
-        padding-inline: 160px;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__headline{
+      img {
         width: 100%;
-        text-align: center;
-        padding: 80px 180px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+      }
     }
+    &-one,
+    &-two {
+      padding: 40px 30px;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+}
+
+.store {
+  &__container {
+    padding-inline: 160px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__headline {
+    width: 100%;
+    text-align: center;
+    padding: 80px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn-container {
+    margin-block: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.middle {
+  &__container {
+    margin-block: 120px;
+    display: flex;
+    flex-direction: row;
+    height: 570px;
+    gap: 1%;
+  }
+  &__card {
+    flex: 7;
+    background: $card-light-red;
+    position: relative;
+    height: 100%;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: 490px;
+      object-fit: cover;
+    }
+    &-heading {
+      width: 60%;
+      z-index: 1;
+      margin: 49px 0 0 45px;
+    }
+  }
+  &__card-two {
+    flex: 5;
+    background: $card-secondary;
+    position: relative;
+    height: 100%;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: 490px;
+      object-fit: cover;
+    }
+  }
+}
+
+.top {
+  &__headline {
+    width: 100%;
+    text-align: center;
+    padding: 80px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn-container {
+    margin-block: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.book {
+  &__container {
+    position: relative;
+  }
+  &__top {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  &__img {
+    flex: 8;
+    height: 713px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__apt {
+    flex: 4;
+    padding-block: 100px;
+    &-container {
+      width: 90%;
+    }
+  }
+  &__img-container {
+    width: 80%;
+    padding: 103px 50px;
+    background: $neutral_white;
+    box-shadow: 0px 4px 8px rgba(171, 190, 209, 0.4);
+    position: absolute;
+    top: 435px;
+    right: 0;
+  }
+}
+.order {
+  margin-top: 570px;
+  height: 908px;
+
+  &__container {
+    height: 100%;
+    position: relative;
+
+    &-img {
+      background-color: $card-nuetral;
+    }
+  }
+  &__card {
+    width: 70%;
+    background: $neutral_white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 15%;
+    top: 296px;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+    padding-block: 97px;
+  }
+  &__headline {
+    h3,
+    p {
+      text-align: center;
+    }
+  }
+  &__form {
+    width: 50%;
+    margin-top: 40px;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+
+    &-container {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      gap: 0px;
+      padding: 4px;
+    }
+    input {
+      border: none;
+      outline: none;
+      padding-inline: 8px;
+    }
+  }
+}
+.featured {
+  &__headline {
+    width: 100%;
+    text-align: center;
+    padding: 80px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer {
+  margin-top: 57px;
+  background: $primary-40;
+  padding: 107px 210px;
+
+  &__container {
+   display: flex;
+   gap: 20px;
+
+    &-ida {
+      flex: 4;
+      p{
+        width: 80%;
+      }
+      &-links{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+      }
+    }
+    &-grid{
+        flex: 8;
+    }
+    &-common{
+        p{
+            text-transform: capitalize;
+        }
+    }
+  }
 }
