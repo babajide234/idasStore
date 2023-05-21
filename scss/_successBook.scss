@@ -1,0 +1,28 @@
+.successModal {
+  background: #898989;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+
+  &__container {
+    background: white;
+    width: 30vw;
+    margin: 0 auto;
+    padding: 32px;
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
+        text-align: center;
+      }
+    }
+    &-close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+}

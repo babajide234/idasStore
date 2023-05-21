@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__topbar">
+        <div class="header__topbar-container">
+          <div class="header__topbar-location">
+            <h2 class="headline headline-body">(225) 555-0118</h2>
+            <h2 class="headline headline-body">idasbeautyworld@gmail.com</h2>
+          </div>
+          <div class="header__topbar-follow">
+            <p class="headline headline-body">
+              Follow Us and get a chance to win 80% off
+            </p>
+          </div>
+          <div class="header__topbar-social">
+            <h3 class="headline headline-body">Follow Us :</h3>
+          </div>
+        </div>
+      </div>
+      <nav class="header__mainnav">
+        <div class="header__mainnav-container">
+          <a href="" class="header__mainnav-logo headline headline-logo">IDA'S BEAUTY</a>
+
+          <ul class="header__mainnav-menu">
+            <li class=""><a href="" class="headline headline-body">Home</a></li>
+            <li class=""><a href="" class="headline headline-body">All Products</a></li>
+            <li class=""><a href="" class="headline headline-body">Categories</a></li>
+            <li class=""><a href="" class="headline headline-body">About Us</a></li>
+            <li class=""><a href="" class="headline headline-body">Contact Us</a></li>
+          </ul>
+
+          <div class="header__icon">
+            <ul class="header__icon-ul">
+              <li class="header__icon-ul-list">
+                <a href="" class="">
+                  <i class="fa-regular fa-user"></i> Login / Register</a
+                >
+              </li>
+              <li class="header__icon-ul-list">
+                <a href="" class="">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+              <li class="header__icon-ul-list">
+                <a href="">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </li>
+              <li class="header__icon-ul-list">
+                <a href="">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="address">
+      <div class="address__container container-small">
+        <div class="address__left">
+          <img src="./img/fixing hair 1.png" alt=" fixing hair image" />
+        </div>
+        <div class="address__right">
+          <div id="map"></div>
+          <div class="address__text">
+            <div class="mbottom-25 address__common">
+              <p class="mbottom-15">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="address__span-address headline headline-sub"
+                  >901 E Wright St Milwaukee, WI 53212.</span
+                >
+              </p>
+              <p>
+                <span class="headline headline-body">
+                  <i class="fa-solid fa-phone"></i>
+                  (225) 555-0118
+                </span>
+                <span class="headline headline-body address__email">
+                  <i class="fa-solid fa-envelope"></i>
+                  idasbeautyworld@gmail.com
+                </span>
+              </p>
+            </div>
+            <div class="address__common">
+              <p class="mbottom-10">
+                <span class="md md-normal">Opening :</span>
+                <span class="md md-md">9am Mon - Fri</span>
+              </p>
+              <p>
+                <span class="md md-normal">Closing :</span>
+                <span class="md md-md">10pm Mon - Fri</span>
+              </p>
+            </div>
+          </div>
+          <div class="address__btn">
+            <button class="btn btn__default">Book Appointment</button>
+            <button class="btn btn__outline">My Bookings</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment">
+      <form class="appointment__form grid-3 container-small">
+        <div class="appointment__calendar">
+          <header class="appointment__p mul-normal">
+            <i class="fa-regular fa-calendar-days"></i>
+            <span class="appointment__span">Select Date</span>
+          </header>
+          <img src="./img/Calendar.png" alt="cal" />
+        </div>
+
+        <div class="appointment__time">
+          <header class="appointment__header mbottom-25">
+            <i class="fa-regular fa-clock"></i>
+            <span class="mul-normal">Select Preferred Time</span>
+          </header>
+          <label for="9-10" class="appointment__label-light">
+            <span class="appointment__span-label mul-light">
+              9:00am — 10:00am
+            </span>
+            <input type="checkbox" name="9-10" id="9-10" />
+          </label>
+          <label for="10-11" class="appointment__label-yellow">
+            <span class="appointment__span-label mul-light">
+              10:00am — 11:00am
+            </span>
+            <input type="checkbox" name="10-11" id="10-11" />
+          </label>
+          <label for="12-1" class="appointment__label-light">
+            <span class="appointment__span-label mul-light">
+              12:00pm — 1:00pm
+            </span>
+            <input type="checkbox" name="12-1" id="12-1" />
+          </label>
+          <label for="2-3" class="appointment__label-light">
+            <span class="appointment__span-label mul-light">
+              2:00pm — 3:00pm
+            </span>
+            <input type="checkbox" name="2-3" id="2-3" />
+          </label>
+
+          <div class="appointment__type">
+            <p class="mul-normal">Select Appointment Type</p>
+            <p class="mul-light mbottom-20">
+              Home appointments attract additional 50% fee.
+            </p>
+            <label for="atHome" class="appointment__label-light">
+              <div>
+                <p class="mul-light secondary-40">At Home</p>
+                <span class="mul-light alternative"
+                  >(+ 50% of appointment fee)</span
+                >
+              </div>
+              <input type="checkbox" name="atHome" id="atHome" />
+            </label>
+            <label for="atSalon" class="appointment__label-yellow">
+              <span class="appointment__span-label mul-light"> At Salon </span>
+              <input type="checkbox" name="atSalon" id="atSalon" />
+            </label>
+          </div>
+        </div>
+
+        <div class="appointment__personal">
+          <header class="appointment__header appointment__header mbottom-25">
+            <span class="appointment__span mul-normal"
+              >Personal Information
+            </span>
+          </header>
+          <input type="text" name="fname" id="fname" placeholder="First Name" />
+          <input type="text" name="lname" id="lname" placeholder="Last Name" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email ( Example: johndoe@gmail.com )"
+          />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone number"
+          />
+          <textarea
+            name="details"
+            id="details"
+            cols="10"
+            rows="10"
+            placeholder="Appointment details"
+          ></textarea>
+          <button class="btn btn__default">Book Now</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="testimonial mbottom-50">
+      <div class="testimonial__container container-small">
+        <header>
+          <p class="md md-semibold">Testimonials</p>
+        </header>
+
+        <div class="testimonial__reviews grid-2">
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+          <div class="flex__comment-container">
+            <div class="flex__comment-profile">
+              <div class="flex__comment-profile-img">
+                <img src="./img/Avatar.png" alt="avatar" />
+              </div>
+              <div class="flex__comment-profile-name">
+                <p>
+                  <span class="sm sm-md">Olivia Rhye</span>
+                  <span class="dot">&middot;</span>
+                  <span class="xs-normal">3 days ago</span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+            <div class="flex__comment-text lg-normal">
+              <p>
+                Id tincidunt faucibus morbi integer elementum. Ornare augue
+                pharetra commodo vitae dui feugiat massa pellentesque.
+                Condimentum scelerisque pellentesque ut tempor
+              </p>
+            </div>
+            <div class="flex__comment-like">
+              <span class="like sm sm-md">
+                <i class="fa-regular fa-thumbs-up"></i> 340
+              </span>
+              <span class="unlike sm sm-md">
+                <i class="fa-regular fa-thumbs-down"></i> 4
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment__modal modal"></section>
+
+    <footer class="footer mbottom-50">
+      <div class="footer__container">
+        <div class="footer__container-ida">
+          <h3 class="headline headline-tag mbottom-25">IDA'S BEAUTY</h3>
+          <p class="headline headline-3">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore voluptua. At vero eos.
+          </p>
+          <div class="footer__container-ida-links">
+            <a href="/">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="/">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__container-grid grid-3">
+          <div class="footer__container-common">
+            <h3 class="md-bold mbottom-25">Information Company</h3>
+
+            <p class="headline headline-3">About us</p>
+            <p class="headline headline-3">Our impact</p>
+            <p class="headline headline-3">Digital Payment</p>
+            <p class="headline headline-3">Member</p>
+            <p class="headline headline-3">Terms and Condition</p>
+          </div>
+          <div class="footer__container-common">
+            <h3 class="md-bold mbottom-25">Account</h3>
+
+            <p class="headline headline-3">FAQ</p>
+            <p class="headline headline-3">Track your order</p>
+            <p class="headline headline-3">Return & refund</p>
+            <p class="headline headline-3">Take our feedback</p>
+            <p class="headline headline-3">Contact us</p>
+          </div>
+          <div class="footer__container-common">
+            <h3 class="md-bold mbottom-25">Info</h3>
+            <p class="headline headline-3">terms & conditions</p>
+            <p class="headline headline-3">privacy policy</p>
+            <p class="headline headline-3">sitemap privacy</p>
+            <p class="headline headline-3">policy sitemap</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,38 +1,91 @@
-  // mixin for margin and padding utilities
-  @mixin space($property, $values...) {
-      @each $value in $values {
-        #{$property}: $value;
-      }
-    }
-  
-  // generate margin utility classes
-  @each $dir in (top, right, bottom, left) {
-    @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) {
-      .m#{$dir}-#{$size} {
-        @include space(margin-#{$dir}, #{$size}px);
-      }
+$grid-columns: 12;
+$breakpoints: (
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1200px,
+  "xl": 1366px,
+);
+
+// mixin for margin and padding utilities
+@mixin space($property, $values...) {
+  @each $value in $values {
+    #{$property}: $value;
+  }
+}
+
+// generate margin and padding utility classes
+@each $dir in (top, right, bottom, left) {
+  @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) {
+    .m#{$dir}-#{$size},
+    .p#{$dir}-#{$size} {
+      @include space(margin-#{$dir}, #{$size}px);
+      @include space(padding-#{$dir}, #{$size}px);
     }
   }
-  
-  // generate padding utility classes
-  @each $dir in (top, right, bottom, left) {
-    @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50) {
-      .p#{$dir}-#{$size} {
-        @include space(padding-#{$dir}, #{$size}px);
-      }
-    }
-  }
-  
+}
+
 $grid-columns: 12;
 $gutter-width: 30px;
 
+//grid
+// @each $value in (0,1,2,3,4,5,6,7,8,9,10,11,12) {
+//   .grid-#{$value} {
+//     display: grid;
+//     gap: 20px;
+//     grid-template-columns: repeat($value, 1fr);
+//   }
+// }
 
-//grid 
-
-@each $value in (0,1,2,3,4,5,6,7,8,9,10,11,12) {
-  .grid-#{$value}{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat($value , 1fr)
+// mixin for responsive design
+@mixin responsive($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media only screen and (max-width: 30rem) {
+      @content;
+    }
+  } @else if $breakpoint == "sm" {
+    @media only screen and (min-width: 30.0625rem) and (max-width: 48rem) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media only screen and (min-width: 48.0625rem) and (max-width: 64rem) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media only screen and (min-width: 64rem) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media only screen and (min-width: 85.375rem) {
+      @content;
+    }
   }
 }
+
+@mixin responsive-display($display) {
+  @if $display == "hide" {
+    display: none !important;
+  } @else if $display == "show" {
+    display: block !important;
+  }
+}
+
+@for $i from 0 through $grid-columns {
+  .grid-#{$i} {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+@each $breakpoint, $width in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    .grid-#{$breakpoint}-#{$i} {
+      @include responsive(#{$breakpoint}) {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+    }
+  }
+}
+
+// mixin for responsive design

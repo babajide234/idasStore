@@ -4,13 +4,43 @@
     padding-inline: 180px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include responsive(xs) {
+      flex-direction: column;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+    @include responsive(md) {
+      padding: 30px 100px;
+    }
+    & * {
+      @include responsive(md) {
+        flex-basis: 50%;
+      }
+    }
   }
 
   &__card {
     display: flex;
     align-items: flex-start;
+
     img {
       margin-right: 20px;
+
+      @include responsive(md) {
+        margin-right: 10px;
+        width: 25px;
+        height: 30px;
+      }
     }
     &-text {
       h3 {
@@ -28,11 +58,50 @@
 .discount {
   &__container {
     padding-inline: 180px;
-    display: flex;
+    display: column;
     justify-content: space-between;
+
+    @include responsive(xs) {
+      padding-inline: 16px;
+    }
+    @include responsive(sm) {
+      padding-inline: 16px;
+    }
+    @include responsive(md) {
+      padding-inline: 150px;
+    }
+
+    &-btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 30%;
+
+        @include responsive(xs) {
+          width: 50%;
+        }
+        @include responsive(sm) {
+          width: 50%;
+        }
+        @include responsive(md) {
+          width: 50%;
+        }
+      }
+    }
   }
   &__card {
     display: flex;
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+    }
+    @include responsive(md) {
+      flex-direction: column;
+    }
     &-one {
       flex: 1.1;
       background: $card-primary;
@@ -41,6 +110,15 @@
         bottom: 0;
         right: 0;
         width: 70%;
+        @include responsive(xs) {
+          right: 15%;
+        }
+        @include responsive(sm) {
+          right: 15%;
+        }
+        @include responsive(md) {
+          right: 15%;
+        }
       }
     }
     &-two {
@@ -52,14 +130,74 @@
         position: absolute;
         bottom: 0;
         z-index: 1;
+
+        @include responsive(xs) {
+          width: 70%;
+          right: 15%;
+        }
+        @include responsive(sm) {
+          width: 70%;
+          right: 15%;
+        }
+        @include responsive(md) {
+          width: 70%;
+          right: 15%;
+        }
       }
     }
     &-one,
     &-two {
       padding: 40px 30px;
-      height: 500px;
+      height: 650px;
       overflow: hidden;
       position: relative;
+    }
+    &-btn {
+      display: flex;
+      gap: 10px;
+      @include responsive(xs) {
+        margin-bottom: 140px;
+      }
+      @include responsive(sm) {
+        margin-bottom: 140px;
+      }
+      @include responsive(md) {
+        margin-bottom: 170px;
+      }
+    }
+    h2 {
+      @include responsive(xs) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+      }
+      @include responsive(sm) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+      }
+      @include responsive(md) {
+        font-size: 64px;
+        line-height: 76px;
+        text-align: center;
+      }
+    }
+    p {
+      @include responsive(xs) {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+      }
+      @include responsive(sm) {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+      }
+      @include responsive(md) {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
     }
   }
 }
@@ -69,6 +207,13 @@
     padding-inline: 160px;
     display: flex;
     justify-content: space-between;
+
+    @include responsive(xs) {
+      padding-inline: 16px;
+    }
+    @include responsive(sm) {
+      padding-inline: 16px;
+    }
   }
   &__headline {
     width: 100%;
@@ -77,12 +222,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive(xs) {
+      padding: 40px 16px;
+    }
+    @include responsive(sm) {
+      padding: 40px 16px;
+    }
   }
   &__btn-container {
-    margin-block: 66px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .discount__container-btn;
   }
 }
 
@@ -93,11 +242,24 @@
     flex-direction: row;
     height: 570px;
     gap: 1%;
+    position: relative;
+
+    @include responsive(xs) {
+      flex-direction: column;
+      margin-top: 40px;
+      margin-bottom: 120px;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+    }
+    @include responsive(md) {
+      flex-direction: column;
+    }
   }
   &__card {
     flex: 7;
     background: $card-light-red;
-    position: relative;
+    // position: relative;
     height: 100%;
 
     img {
@@ -107,11 +269,32 @@
       width: 70%;
       height: 490px;
       object-fit: cover;
+
+      @include responsive(xs) {
+        height: 180px;
+        right: 15%;
+      }
+      @include responsive(sm) {
+        height: 180px;
+        right: 15%;
+      }
+      @include responsive(md) {
+      }
     }
     &-heading {
       width: 60%;
       z-index: 1;
       margin: 49px 0 0 45px;
+
+      @include responsive(xs) {
+        margin: 32px auto 170px auto;
+      }
+      @include responsive(sm) {
+        margin: 32px auto 170px auto;
+      }
+      @include responsive(md) {
+        margin: 45px 0 270px 45px;
+      }
     }
   }
   &__card-two {
@@ -127,11 +310,52 @@
       width: 70%;
       height: 490px;
       object-fit: cover;
+
+      @include responsive(xs) {
+        height: 180px;
+        right: 15%;
+      }
+      @include responsive(sm) {
+        height: 180px;
+        right: 15%;
+      }
+    }
+  }
+  &__card,
+  &__card-two {
+    h2 {
+      @include responsive(xs) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 10px !important;
+      }
+      @include responsive(sm) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 10px !important;
+      }
+      @include responsive(md) {
+        font-size: 64px;
+        line-height: 76px;
+        text-align: left;
+        margin-bottom: 10px !important;
+        width: 90%;
+      }
+    }
+    & button {
+      @include responsive(md) {
+        width: 40%;
+      }
     }
   }
 }
 
 .top {
+  @include responsive(md) {
+    margin-top: 500px;
+  }
   &__headline {
     width: 100%;
     text-align: center;
@@ -139,12 +363,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive(xs) {
+      padding-inline: 16px;
+    }
+    @include responsive(sm) {
+      padding-inline: 16px;
+    }
+    @include responsive(md) {
+      padding-inline: 16px;
+    }
   }
   &__btn-container {
     margin-block: 66px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    button {
+      width: 20%;
+      @include responsive(xs) {
+        width: 40%;
+      }
+      @include responsive(sm) {
+      }
+    }
   }
 }
 
@@ -156,10 +399,33 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+    }
+    @include responsive(md) {
+      flex-direction: column;
+    }
   }
   &__img {
     flex: 8;
     height: 713px;
+
+    @include responsive(xs) {
+      width: 100%;
+      height: 292px;
+    }
+    @include responsive(sm) {
+      width: 100%;
+      height: 292px;
+    }
+    @include responsive(md) {
+      width: 100%;
+      height: 697px;
+    }
 
     img {
       object-fit: cover;
@@ -170,8 +436,90 @@
   &__apt {
     flex: 4;
     padding-block: 100px;
+
+    @include responsive(xs) {
+      padding-block: 40px;
+    }
+    @include responsive(sm) {
+      padding-block: 40px;
+    }
+    @include responsive(md) {
+      padding-block: 40px;
+    }
     &-container {
       width: 90%;
+
+      @include responsive(xs) {
+        width: 100%;
+      }
+      @include responsive(sm) {
+        width: 100%;
+      }
+      @include responsive(md) {
+        width: 100%;
+      }
+
+      p {
+        @include responsive(xs) {
+          text-align: center;
+          width: 70%;
+          margin: 0 auto;
+        }
+        @include responsive(sm) {
+          text-align: center;
+        }
+        @include responsive(md) {
+          text-align: center;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      @include responsive(xs) {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      @include responsive(sm) {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      @include responsive(md) {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 50%;
+        @include responsive(xs) {
+          width: 200px;
+        }
+        @include responsive(sm) {
+          width: 200px;
+        }
+      }
+    }
+
+    h3 {
+      @include responsive(xs) {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+      }
+      @include responsive(sm) {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+      }
+      @include responsive(md) {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+      }
     }
   }
   &__img-container {
@@ -182,12 +530,68 @@
     position: absolute;
     top: 435px;
     right: 0;
+
+    @include responsive(xs) {
+      position: unset;
+      box-shadow: unset;
+      width: 100%;
+      padding: 40px 45px;
+    }
+    @include responsive(sm) {
+      position: unset;
+      box-shadow: unset;
+      width: 100%;
+      padding: 70px 65px;
+    }
+    @include responsive(md) {
+      top: 56rem;
+      box-shadow: unset;
+      right: 5rem;
+    }
+
+    &-small {
+      @include responsive(md) {
+        grid: unset;
+
+        .book__img-1 {
+          position: absolute;
+          top: -5rem;
+          right: 5rem;
+          z-index: 2;
+          width: 300px;
+          height: 353px;
+          box-shadow: 0px 4px 8px rgba(171, 190, 209, 0.4);
+        }
+        .book__img-2 {
+          width: 300px;
+          height: 353px;
+        }
+        .book__img-3 {
+          position: absolute;
+          top: 350px;
+          right: 2rem;
+          z-index: 2;
+          width: 300px;
+          height: 353px;
+          box-shadow: 0px 4px 8px rgba(171, 190, 209, 0.4);
+        }
+      }
+    }
   }
 }
 .order {
   margin-top: 570px;
   height: 908px;
 
+  @include responsive(xs) {
+    margin-top: 50px;
+  }
+  @include responsive(sm) {
+    margin-top: 50px;
+  }
+  @include responsive(md) {
+    margin-top: 900px;
+  }
   &__container {
     height: 100%;
     position: relative;
@@ -208,17 +612,47 @@
     top: 296px;
     box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
     padding-block: 97px;
+
+    @include responsive(xs) {
+      padding-block: 20px;
+      top: 196px;
+      width: 85%;
+      right: 7.5%;
+    }
+    @include responsive(sm) {
+      padding-block: 20px;
+      top: 196px;
+      width: 85%;
+      right: 7.5%;
+    }
+    @include responsive(md) {
+      padding-block: 20px;
+      top: 200px;
+    }
   }
   &__headline {
-    h3,
-    p {
-      text-align: center;
+    h3 {
+      @include responsive(xs) {
+        font-size: 24px;
+        line-height: 31px;
+      }
+      @include responsive(sm) {
+        line-height: 31px;
+        font-size: 24px;
+      }
     }
   }
   &__form {
     width: 50%;
     margin-top: 40px;
     box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+
+    @include responsive(xs) {
+      width: 85%;
+    }
+    @include responsive(sm) {
+      width: 85%;
+    }
 
     &-container {
       display: grid;
@@ -234,6 +668,15 @@
   }
 }
 .featured {
+  @include responsive(xs) {
+    margin-top: -350px;
+  }
+  @include responsive(sm) {
+    margin-top: -350px;
+  }
+  @include responsive(md) {
+    margin-top: -400px;
+  }
   &__headline {
     width: 100%;
     text-align: center;
@@ -241,36 +684,118 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive(xs) {
+      padding: 0 16px;
+    }
+    @include responsive(sm) {
+      padding: 0 16px;
+    }
+
+    h3 {
+      @include responsive(xs) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      @include responsive(sm) {
+        line-height: 28px;
+        font-size: 20px;
+      }
+    }
+    p {
+      @include responsive(xs) {
+        width: 50%;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+      @include responsive(sm) {
+        width: 50%;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__grid {
+    padding-inline: 80px;
+    @include responsive(md) {
+      padding-inline: 100px;
+    }
   }
 }
+
 .footer {
   margin-top: 57px;
   background: $primary-40;
-  padding: 107px 210px;
+  padding: 107px 150px;
 
+  @include responsive(xs) {
+    padding: 40px 16px;
+  }
+  @include responsive(xs) {
+    padding: 40px 16px;
+  }
+  @include responsive(md) {
+    padding: 40px;
+  }
   &__container {
-   display: flex;
-   gap: 20px;
+    display: flex;
+    gap: 20px;
 
-    &-ida {
-      flex: 4;
-      p{
-        width: 80%;
+    @include responsive(xs) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @include responsive(md) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-1,
+    &-2 {
+      flex: 6;
+      display: flex;
+      justify-content: space-evenly;
+
+      @include responsive(xs) {
+        justify-content: flex-start;
+        gap: 10px;
       }
-      &-links{
+      @include responsive(sm) {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+      @include responsive(md) {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+    &-ida {
+      flex: 1;
+      &-links {
         width: 30%;
         display: flex;
         justify-content: space-between;
         margin-top: 16px;
       }
     }
-    &-grid{
-        flex: 8;
+    &-grid {
     }
-    &-common{
-        p{
-            text-transform: capitalize;
-        }
+    &-common {
+      flex: 1;
+
+      p {
+        text-transform: capitalize;
+      }
     }
   }
 }

@@ -1,15 +1,40 @@
-.panel{
-    &__nav{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding-block: 30px;
-        &-item{}
-        &-link {
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 28px;
-            color: #4B4B4B;
-        }
+.panel {
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 30px;
+
+    @include responsive(xs) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        padding: 0;
     }
+    @include responsive(sm) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+    @include responsive(md) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+    &-item {
+      white-space: nowrap;
+    }
+    &-link {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 28px;
+      color: #4b4b4b;
+    }
+  }
 }

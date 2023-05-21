@@ -1,73 +1,258 @@
-.header{
+.header {
+  width: 100%;
+  // height: 100vh;
+
+  &__topbar {
     width: 100%;
-    // height: 100vh;
+    display: block;
+    background: $secondary-40;
+    padding-block: 10px;
 
-    &__topbar{
-        width: 100%;
-        display: block;
-        background: $secondary-40;
-        padding-block: 10px;
-        &-location{
-            display: flex;
-            & h2{
-                margin-right: 30px;
-                &:last-of-type{
-                    margin: 0;
-                }
-            }
+    &-location {
+      display: flex;
+      & h2 {
+        margin-right: 30px;
+        &:last-of-type {
+          margin: 0;
         }
-        &-container{
-            padding-inline: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      }
     }
-    &__mainnav{
-        width: 100%;
-        padding: 16px;
-        &-logo{
-            color: $neutral_black;
-        }
-        &-menu{
-            display: flex;
-            li{
-                margin-right: 52px;
-                &:last-of-type{
-                    margin: 0;
-                }
-            }
-        }
-        &-container{
-            padding-inline: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    &-container {
+      padding-inline: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include responsive(xs) {
+        padding-inline: 35px;
+      }
+      @include responsive(sm) {
+        padding-inline: 35px;
+      }
     }
-    &__hero{
-        // height: 78vh;
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      h3 {
+        white-space: nowrap;
+      }
+    }
+  }
+  &__mainnav {
+    width: 100%;
+    padding: 16px;
+
+    @include responsive(xs) {
+      padding-inline: 15px;
+    }
+    @include responsive(sm) {
+      padding-inline: 15px;
+    }
+    &-logo {
+      color: $neutral_black;
+    }
+    &-menu {
+      display: flex;
+      li {
+        margin-right: 52px;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+    &-container {
+      padding-inline: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include responsive(xs) {
+        padding-inline: 0;
+      }
+      @include responsive(sm) {
+        padding-inline: 0;
+      }
+      @include responsive(md) {
+        padding-inline: 0;
+      }
+    }
+  }
+  &__hero {
+    // height: 78vh;
+    width: 100%;
+    background: rgba(255, 233, 92, 0.75);
+    display: flex;
+    position: relative;
+    &-container {
+      padding-block: 30px;
+      padding-inline: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include responsive(xs) {
+        padding: 20px 15px;
+        flex-direction: column;
+      }
+      @include responsive(sm) {
+        padding: 10px 15px;
+        flex-direction: column;
+      }
+      @include responsive(md) {
+        padding: 10px 15px;
+        flex-direction: column;
+      }
+    }
+    &-text {
+      flex: 1;
+
+      h4 {
+        @include responsive(xs) {
+          text-align: center;
+          padding-bottom: 0;
+          margin-block: 24px;
+        }
+        @include responsive(sm) {
+          text-align: center;
+          padding-bottom: 0;
+          margin-block: 24px;
+        }
+        @include responsive(md) {
+          text-align: center;
+          padding-bottom: 0;
+          margin-block: 24px;
+        }
+      }
+      h2 {
+        @include responsive(xs) {
+          font-size: 28px;
+          line-height: 36px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+        @include responsive(sm) {
+          font-size: 28px;
+          line-height: 36px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+        @include responsive(md) {
+          font-size: 64px;
+          line-height: 76px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+      }
+      p {
+        @include responsive(xs) {
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+        @include responsive(sm) {
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+        @include responsive(md) {
+          font-size: 28px;
+          line-height: 36px;
+          text-align: center;
+          padding-bottom: 0;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include responsive(xs) {
+        margin-bottom: 55px;
+      }
+      @include responsive(sm) {
+        margin-bottom: 55px;
+      }
+      @include responsive(md) {
+        margin-bottom: 55px;
+      }
+      & button {
+        @include responsive(xs) {
+          width: 30%;
+        }
+        @include responsive(sm) {
+          width: 30%;
+        }
+        @include responsive(md) {
+          width: 30%;
+        }
+      }
+    }
+    &-image {
+      flex: 1;
+      img {
         width: 100%;
-        background: rgba(255, 233, 92, 0.75);
+        height: 100%;
+      }
+    }
+  }
+  &__icon {
+    &-ul {
         display: flex;
-        position: relative;
-        &-container{
-            padding-block: 30px;
-            padding-inline: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        &-text{
-            flex: 1;
-        }
-        &-image{
-            flex: 1;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
+        justify-content: space-between;
+        gap: 30px;
+
+      //   @include responsive(xs) {
+      //     justify-content: space-between;
+      //     align-items: center;
+      //   }
+      //   @include responsive(sm) {
+      //     width: 100%;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //   }
+      //   @include responsive(md) {
+      //     width: 100%;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //   }
+
+      &-list {
+      }
+    }
+  }
+  &__hamburger-icon {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+    &-bar {
+      width: 100%;
+      height: 3px;
+      background-color: #000;
+      margin-bottom: 5px;
+      transition: transform 0.3s;
     }
 
+    &:active .hamburger-bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    &:active .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:active .hamburger-bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
 }

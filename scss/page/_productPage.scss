@@ -3,11 +3,31 @@
   &__container {
     display: flex;
     gap: 20px;
+
+    @include responsive(xs) {
+      flex-direction: column;
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+    }
+    @include responsive(md) {
+      flex-direction: column;
+    }
   }
   &__left {
     background: $card-nuetral;
     flex: 6;
     padding: 49px 100px;
+
+    @include responsive(xs) {
+      padding: 24px 40px;
+    }
+    @include responsive(sm) {
+      padding: 24px 40px;
+    }
+    @include responsive(md) {
+      padding: 24px 40px;
+    }
   }
   &__right {
     flex: 6;
@@ -19,9 +39,48 @@
     &-f {
       display: flex;
       flex-direction: row;
+      @include responsive(xs) {
+        flex-direction: column;
+      }
+      @include responsive(sm) {
+        flex-direction: column;
+      }
+      @include responsive(md) {
+        flex-direction: column;
+      }
 
       & p {
         flex: 6;
+      }
+    }
+  }
+  &__price {
+    aside {
+      @include responsive(xs) {
+        display: flex;
+        gap: 30px;
+        h3 {
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+      @include responsive(sm) {
+        display: flex;
+        gap: 30px;
+        h3 {
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+      @include responsive(md) {
+        display: flex;
+        gap: 30px;
+        //margin-bottom: 40px;
+
+        h3 {
+          font-size: 30px;
+          line-height: 38px;
+        }
       }
     }
   }
@@ -60,10 +119,6 @@
     }
   }
   &__btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
     &-container {
       width: 60%;
@@ -82,10 +137,42 @@
 
   &__container {
     display: flex;
+
+    @include responsive(xs) {
+      flex-direction: column-reverse;
+    }
+    @include responsive(sm) {
+      flex-direction: column-reverse;
+    }
+    @include responsive(md) {
+      flex-direction: column-reverse;
+    }
   }
   &__review-container {
     flex: 6;
     padding-right: 10%;
+
+    @include responsive(xs) {
+      padding: 0;
+      h3 {
+        margin: 20px 0;
+        padding: 0;
+      }
+    }
+    @include responsive(sm) {
+      padding: 0;
+      h3 {
+        margin: 20px 0;
+        padding: 0;
+      }
+    }
+    @include responsive(md) {
+      padding: 0;
+      h3 {
+        margin: 20px 0;
+        padding: 0;
+      }
+    }
   }
 
   &__review {
@@ -111,9 +198,10 @@
     }
     &-header {
       margin-bottom: 60px;
+      display: flex;
+      gap: 20px;
       & span {
         padding-block: 10px;
-        margin-right: 20px;
 
         &:hover {
           cursor: pointer;
@@ -159,10 +247,57 @@
 
   &__desc {
     flex: 6;
+
+    h3 {
+      @include responsive(xs) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+      }
+      @include responsive(sm) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+      }
+      @include responsive(md) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+      }
+    }
+    p {
+      @include responsive(xs) {
+        font-size: 12px;
+        line-height: 20px;
+      }
+      @include responsive(sm) {
+        font-size: 12px;
+        line-height: 20px;
+      }
+      @include responsive(md) {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
   }
 }
 .related {
   &__headline {
     margin-block: 60px;
+
+    span {
+      @include responsive(xs) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include responsive(sm) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include responsive(md) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
   }
 }

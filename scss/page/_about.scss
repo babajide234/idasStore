@@ -1,0 +1,17 @@
+.about {
+  margin-block: 50px 400px;
+
+  &__container {
+    &-founder {
+      margin-top: 50px;
+
+      p{
+        margin-block: 20px;
+      }
+    }
+
+    p{
+        color: #000000;
+    }
+  }
+}

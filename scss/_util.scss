@@ -1,8 +1,61 @@
+// Extra small screens (less than 576px)
+
+@include responsive("xs") {
+  .xs-hide {
+    @include responsive-display("hide");
+  }
+  .xs-show {
+    @include responsive-display("show");
+  }
+}
+
+// Small screens (576px - 767.98px)
+@include responsive("sm") {
+  .sm-hide {
+    @include responsive-display("hide");
+  }
+  .sm-show {
+    @include responsive-display("show");
+  }
+}
+
+// Medium screens (768px - 991.98px)
+@include responsive("md") {
+  .md-hide {
+    @include responsive-display("hide");
+  }
+  .md-show {
+    @include responsive-display("show");
+  }
+}
+
+// Large screens (992px - 1199.98px)
+@include responsive("lg") {
+  .lg-hide {
+    @include responsive-display("hide");
+  }
+  .lg-show {
+    @include responsive-display("show");
+  }
+}
+
+// Extra large screens (1200px and up)
+@include responsive("xl") {
+  .xl-hide {
+    @include responsive-display("hide");
+  }
+  .xl-show {
+    @include responsive-display("show");
+  }
+}
 .fa-star {
   color: $warning-400;
 }
 .center {
   text-align: center;
+}
+.alternative {
+  color: #777474;
 }
 
 .progress-bar {
@@ -106,9 +159,34 @@
   height: 350px;
 }
 
-.secondary-40{
-  color: $secondary-40
+.secondary-40 {
+  color: $secondary-40;
 }
-.secondary-90{
-  color: $secondary-90
+.secondary-90 {
+  color: $secondary-90;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid $gray-300;
+  /* Add space for the custom arrow */
+}
+
+.custom-select::after {
+  content: "\f0d7"; /* Unicode character for a downward pointing arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allow interaction with the select box */
+}
+.text-center {
+  text-align: center;
 }

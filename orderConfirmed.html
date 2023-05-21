@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./scss/style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap"
@@ -50,7 +50,7 @@
             <li class=""><a href="" class="headline headline-body">Contact Us</a></li>
           </ul>
 
-           <div class="header__icon">
+          <div class="header__icon">
             <ul class="header__icon-ul">
               <li class="header__icon-ul-list">
                 <a href="" class="">
@@ -78,104 +78,55 @@
       </nav>
     </header>
 
-    <section class="checkout">
-      <div class="checkout__container container-small">
-        <div class="checkout__shipping">
-          <div class="checkout__shipping-detail">
-            <h3 class="xs-semibold">Shipping details</h3>
-            <form action="">
-              <label for="standard" class="checkout__form-label">
-                <input type="radio" id="standard" name="shipping" />
-                <div class="checkout__form-span">
-                  <p class="lg-md">Standard Shipping</p>
-                  <p class="sm sm-normal">
-                    $500 to 700. Orders placed now would arrive between 23 Jun
-                    and 1 Jul.
-                  </p>
-                </div>
-              </label>
-              <label for="express" class="checkout__form-label">
-                <input type="radio" id="express" name="shipping" />
-                <div class="checkout__form-span">
-                  <p class="lg-md">Express Shipping</p>
-                  <p class="sm sm-normal">
-                    $500 to 1000. Orders placed now would arrive between 20 Jun
-                    and 23 Jun.
-                  </p>
-                </div>
-              </label>
-            </form>
-          </div>
-          <div class="checkout__shipping">
-            <div class="checkout__shipping-detail">
-              <h3 class="xs-semibold">Payment Method</h3>
-              <form action="">
-                <label for="bank" class="checkout__form-label">
-                  <input type="radio" id="bank" name="pay" />
-                  <div class="checkout__form-span">
-                    <p class="lg-md">Bank Transfer</p>
-                    <p class="sm sm-normal">
-                      Make transfer to our bank account. Use your order number
-                      as the description.
-                    </p>
-                  </div>
-                </label>
-                <label for="debit" class="checkout__form-label">
-                  <input type="radio" id="debit" name="pay" />
-                  <div class="checkout__form-span">
-                    <p class="lg-md">Pay with Debit Card</p>
-                    <p class="sm sm-normal">
-                      Pay with Visa, Mastercard using Paystack
-                    </p>
-                  </div>
-                </label>
-                <label for="paypal" class="checkout__form-label">
-                  <input type="radio" id="paypal" name="pay" />
-                  <div class="checkout__form-span">
-                    <p class="lg-md">Pay with Paypal</p>
-                    <p class="sm sm-normal">Pay with PayPal</p>
-                  </div>
-                </label>
-                <label for="link" class="checkout__form-label">
-                  <input type="radio" id="link" name="pay" />
-                  <div class="checkout__form-span">
-                    <p class="lg-md">Pay with Link</p>
-                    <p class="sm sm-normal">Pay with Link</p>
-                  </div>
-                </label>
-              </form>
-            </div>
-          </div>
+    <section class="orderConfirmed">
+      <div class="orderConfirmed__container">
+        <div class="orderConfirmed__icon-container">
+          <i class="fa-solid fa-box fa-5x" color="#32C997"></i>
         </div>
-
-        <div class="checkout__summary">
-          <div class="checkout__summary-container">
-            <div class="checkout__summary-row mbottom-30">
-              <span class="xs-semibold">Order Summary</span>
-              <span class="xs-normal">View Basket </span>
-            </div>
-            <div class="checkout__summary-row mbottom-10">
-              <span class="md md-normal">Subtotal</span>
-              <span class="md md-md">$36.00</span>
-            </div>
-            <div class="checkout__summary-row mbottom-30">
-              <span class="md md-normal">Delivery Fee</span>
-              <span class="md md-normal">Add Address</span>
-            </div>
-            <div class="checkout__summary-row mbottom-50">
-              <span class="md md-normal">Total</span>
-              <span class="lg-bold">$36.00</span>
-            </div>
-            <div class="checkout__summary-btn">
-              <button class="btn btn__default">Place Order</button>
-            </div>
-          </div>
+        <h2 class="orderConfirmed__header center xs-semibold">
+          Order Confirmed
+        </h2>
+        <p class="orderConfirmed__p-text center md md-normal mbottom-35">
+          We have confirmed payment for order #<span class="secondary-40"
+            >R23456</span
+          >, and it is being processed.
+        </p>
+        <div class="orderConfirmed__btn">
+          <button class="btn btn__default">
+            <span> Track Order </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
+        <a href="/">
+          <p class="secondary-40">Continue Shopping</p>
+        </a>
       </div>
     </section>
 
-    <!-- MODAL NEW ADDRESS -->
-     
+    <section class="orderConfirmed orderNotConfirmed">
+      <div class="orderConfirmed__container">
+        <div class="orderNotConfirmed__icon-container">
+          <i class="fa-solid fa-box fa-5x" color="#FF3374"></i>
+        </div>
+        <h2 class="orderConfirmed__header center xs-semibold">
+          Order Confirmed
+        </h2>
+        <p class="orderConfirmed__p-text center md md-normal mbottom-35">
+          We have confirmed payment for order #<span class="secondary-40"
+            >R23456</span
+          >, and it is being processed.
+        </p>
+        <div class="orderConfirmed__btn">
+          <button class="btn btn__default">
+            <span> Track Order </span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <a href="/">
+          <p class="secondary-40">Continue Shopping</p>
+        </a>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="footer__container">
@@ -226,7 +177,5 @@
         </div>
       </div>
     </footer>
-
-    <script></script>
   </body>
 </html>

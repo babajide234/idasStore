@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="modal">
+      <div class="modal__container">
+        <header class="modal__header">
+          <span>New Address</span>
+        </header>
+        <form action="" class="modal__form">
+          <div class="modal__form-flex mbottom-25">
+            <label for="firstName" class="modal__label">
+              <span class="modal__span-label sm sm-md"> First name </span>
+              <div class="modal__form-input-container">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="md md-normal"
+                  placeholder="John"
+                  required
+                />
+              </div>
+            </label>
+
+            <label for="lastName" class="modal__label">
+              <span class="modal__span-label sm sm-md">Last name</span>
+              <div class="modal__form-input-container">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  class="md md-normal"
+                  placeholder="Doe"
+                  required
+                />
+              </div>
+            </label>
+          </div>
+
+          <section class="mbottom-25">
+            <label for="phone" class="modal__label">
+              <span class="modal__span-label sm sm-md">Phone</span>
+              <div class="modal__form-input-container modal__phone">
+                <p class="modal__form-p md md-normal">+1</p>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  class="md md-normal"
+                  placeholder="80-0000-000"
+                  required
+                />
+              </div>
+            </label>
+          </section>
+
+          <section class="mbottom-25">
+            <label for="street" class="modal__label">
+              <span class="modal__span-label sm sm-md"> Street Address </span>
+              <div class="modal__form-input-container">
+                <input type="text" name="street" id="'street" />
+              </div>
+            </label>
+          </section>
+
+          <div class="modal__form-flex mbottom-25">
+            <label for="state" class="modal__form-flex-label">
+              <span class="modal__span-label sm sm-md">State</span>
+              <div class="modal__phone">
+                <div class="custom-select">
+                  <select>
+                    <option value="1" disabled selected>State</option>
+                    <option value="2" disabled>Newark</option>
+                    <option value="3" disabled>Delaware</option>
+                    <option value="4" disabled>California</option>
+                    <option value="5" disabled>Tennesse</option>
+                    <option value="6" disabled>New York</option>
+                  </select>
+                </div>
+              </div>
+            </label>
+            <label for="city" class="modal__form-flex-label">
+              <span class="modal__span-label sm sm-md">City</span>
+              <div class="modal__phone">
+                <div class="custom-select">
+                  <select class="md md-normal">
+                    <option value="1" disabled selected>City</option>
+                    <option value="2" disabled>Newark</option>
+                    <option value="3" disabled>Delaware</option>
+                    <option value="4" disabled>California</option>
+                    <option value="5" disabled>Tennesse</option>
+                    <option value="6" disabled>New York</option>
+                  </select>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <footer class="modal__form-footer mbottom-25">
+            <div>
+              <label for="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <span class="sm sm-md">Make a default</span>
+              </label>
+            </div>
+            <div class="modal__form-footer-btn">
+              <button class="btn btn__default sm sm-md">Save</button>
+            </div>
+          </footer>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

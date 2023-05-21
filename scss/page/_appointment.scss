@@ -108,3 +108,57 @@
     }
   }
 }
+
+.appointment {
+  &__header {
+    display: flex;
+
+    i {
+      margin-right: 15px;
+    }
+  }
+  &__time {
+    width: 80%;
+    margin: 0 auto;
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 3px;
+      padding: 10px 40px;
+      margin-block: 10px;
+    }
+  }
+  &__label-light {
+    border: 0.5px solid #d8d8d8;
+    background: #f3f7f9;
+  }
+  &__label-yellow {
+    background: #ffe433;
+  }
+  &__time &__type {
+    margin-top: 40px;
+  }
+  &__personal {
+    width: 80%;
+    margin: 0 auto;
+    input {
+      padding: 10px 16px;
+      background: #f3f7f9;
+      border: 0.5px solid #d8d8d8;
+      border-radius: 6px;
+      width: 100%;
+      margin-bottom: 20px;
+      outline: none;
+    }
+    textarea {
+      background: #f3f7f9;
+      border: 0.5px solid #d8d8d8;
+      border-radius: 6px;
+      width: 100%;
+      min-height: 30px;
+      padding: 10px 16px;
+      outline: none;
+    }
+  }
+}

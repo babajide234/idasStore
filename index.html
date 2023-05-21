@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,39 +25,73 @@
       <div class="header__topbar">
         <div class="header__topbar-container">
           <div class="header__topbar-location">
-            <h2 class="headline-body">(225) 555-0118</h2>
-            <h2 class="headline-body">idasbeautyworld@gmail.com</h2>
+            <h2 class="headline headline-body">(225) 555-0118</h2>
+            <h2 class="headline headline-body xs-hide sm-hide">
+              idasbeautyworld@gmail.com
+            </h2>
           </div>
-          <div class="header__topbar-follow">
-            <p class="headline-body">
+          <div class="header__topbar-follow xs-hide sm-hide md-hide">
+            <p class="headline headline-body">
               Follow Us and get a chance to win 80% off
             </p>
           </div>
           <div class="header__topbar-social">
-            <h3 class="headline-body">Follow Us :</h3>
+            <h3 class="headline headline-body">Follow Us :</h3>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
           </div>
         </div>
       </div>
       <nav class="header__mainnav">
         <div class="header__mainnav-container">
-          <a href="" class="header__mainnav-logo headline-logo">IDA'S BEAUTY</a>
+          <div class="lg-hide xl-hide">
+            <div class="header__hamburger-icon">
+              <div class="header__hamburger-icon-bar"></div>
+              <div class="header__hamburger-icon-bar"></div>
+              <div class="header__hamburger-icon-bar"></div>
+            </div>
+          </div>
+          <a
+            href=""
+            class="header__mainnav-logo headline headline-logo xs-hide sm-hide md-hide"
+            >IDA'S BEAUTY</a
+          >
 
-          <ul class="header__mainnav-menu">
-            <li class=""><a href="" class="headline-body">Home</a></li>
-            <li class=""><a href="" class="headline-body">All Products</a></li>
-            <li class=""><a href="" class="headline-body">Categories</a></li>
-            <li class=""><a href="" class="headline-body">About Us</a></li>
-            <li class=""><a href="" class="headline-body">Contact Us</a></li>
+          <ul class="header__mainnav-menu xs-hide sm-hide md-hide">
+            <li class=""><a href="" class="headline headline-body">Home</a></li>
+            <li class="">
+              <a href="" class="headline headline-body">All Products</a>
+            </li>
+            <li class="">
+              <a href="" class="headline headline-body">Categories</a>
+            </li>
+            <li class="">
+              <a href="" class="headline headline-body">About Us</a>
+            </li>
+            <li class="">
+              <a href="" class="headline headline-body">Contact Us</a>
+            </li>
           </ul>
 
-          <div class="">
-            <ul class="">
-              <li class="">
+          <div class="header__icon">
+            <ul class="header__icon-ul">
+              
+              <li class="header__icon-ul-list">
                 <a href="" class="">
-                  <i class="fa-thin fa-user"></i> Login / Register</a
+                  <i class="fa-regular fa-user"></i> Login / Register</a
                 >
+                <a href="" class="">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+                <a href="">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
               </li>
-              <li class=""><a href="" class=""></a></li>
             </ul>
           </div>
         </div>
@@ -59,18 +99,20 @@
       <div class="header__hero">
         <div class="header__hero-container">
           <div class="header__hero-text">
-            <h4 class="headline-tag mbottom-40">SUMMER SALES</h4>
-            <h2 class="headline-1 mbottom-40">
+            <h4 class="headline headline-tag mbottom-40">SUMMER SALES</h4>
+            <h2 class="headline headline-1 mbottom-40">
               WE HAVE A SPECIAL OFFER FOR YOU.
             </h2>
-            <p class="headline-sub mbottom-40">
+            <p class="headline headline-sub mbottom-40">
               Try us today and get a very affordable discount on your first
               purchase. We’re here to make you feel better with our products.
             </p>
-            <button class="btn">SHOP NOW</button>
+            <div class="header__hero-btn">
+              <button class="btn btn__default">SHOP NOW</button>
+            </div>
           </div>
           <div class="header__hero-image">
-            <img src="/img/Header.png" alt="" class="" />
+            <img src="./img/Header.png" alt="" class="" />
           </div>
         </div>
       </div>
@@ -111,31 +153,38 @@
 
     <section class="discount">
       <div class="discount__container">
-        <div class="discount__card">
+        <div class="discount__card mbottom-20">
           <div class="discount__card-one">
-            <h2 class="headline-2 mbottom-20">
+            <h2 class="headline headline-2 mbottom-20">
               Clearance Sale Up to 70% off !
             </h2>
-            <button class="btn btn__default">Shop Now</button>
+            <div class="discount__card-btn">
+              <button class="btn btn__default">Shop Now</button>
+            </div>
             <img src="./img/hair 24.png" alt="" />
           </div>
           <div class="discount__card-two">
-            <h2 class="headline-2 mbottom-20">Discount of 20%</h2>
-            <p class="headline-sub mbottom-10">ON ALL YOUR HAIR WASH</p>
-            <div class="mbottom-50">
+            <h2 class="headline headline-2 mbottom-20">Discount of 20%</h2>
+            <p class="headline headline-sub mbottom-10">
+              ON ALL YOUR HAIR WASH
+            </p>
+            <div class="discount__card-btn mbottom-50">
               <button class="btn btn__default mright-30">Shop Now</button>
               <button class="btn btn__outline">View More</button>
             </div>
             <img src="./img/hair 27.png" alt="" />
           </div>
         </div>
+        <div class="discount__container-btn">
+          <button class="btn btn__default">Book Appointment</button>
+        </div>
       </div>
     </section>
 
     <section class="store">
       <div class="store__headline">
-        <h3 class="headline-head mbottom-15">Our Products In Store</h3>
-        <p class="headline-head-sub">Top view in this week</p>
+        <h3 class="headline headline-head mbottom-15">Our Products In Store</h3>
+        <p class="headline headline-head-sub">Top view in this week</p>
       </div>
       <div class="container-big mbottom-30">
         <ul class="panel__nav">
@@ -159,7 +208,7 @@
           </li>
         </ul>
       </div>
-      <div class="panel grid-3 container-small">
+      <div class="panel grid-3 container-small grid-xs-1 grid-sm-1 grid-md-1 mbottom-20">
         <div class="product__card">
           <div class="product__card-image">
             <img src="./img/wig 21.png" alt="" />
@@ -247,7 +296,7 @@
       <div class="middle__container">
         <div class="middle__card">
           <div class="middle__card-heading">
-            <h2 class="headline-2 mbottom-20">
+            <h2 class="headline headline-2 mbottom-20">
               We've got the right choices for you
             </h2>
 
@@ -257,7 +306,7 @@
         </div>
         <div class="middle__card-two">
           <div class="middle__card-heading">
-            <h2 class="headline-2 mbottom-20">
+            <h2 class="headline headline-2 mbottom-20">
               <p>Top</p>
               Sale Wigs
             </h2>
@@ -270,10 +319,12 @@
 
     <section class="top container-small">
       <div class="top__headline">
-        <h3 class="headline-head mbottom-15">Our Top Selling Products</h3>
-        <p class="headline-head-sub">Top view in this week</p>
+        <h3 class="headline headline-head mbottom-15">
+          Our Top Selling Products
+        </h3>
+        <p class="headline headline-head-sub">Top view in this week</p>
       </div>
-      <div class="panel grid-3 container-small">
+      <div class="panel grid-3 grid-xs-1 grid-sm-1 grid-md-1">
         <div class="product__card">
           <div class="product__card-image">
             <img src="./img/neck 16.png" alt="" />
@@ -372,24 +423,24 @@
               <div class="book__apt-btn">
                 <button class="btn btn__default">Book appointment</button>
               </div>
-              <h3 class="headline-2 mbottom-20">
+              <h3 class="headline headline-2 mbottom-20">
                 Book an Appointment with us today!
               </h3>
-              <p class="headline-head-sub">
+              <p class="headline headline-head-sub">
                 Get your hair and nail fixed in a short. We're open 24/7
               </p>
             </div>
           </div>
         </div>
         <div class="book__img-container">
-          <div class="grid-3 book__img-container-small">
-            <div class="book__img-2">
+          <div class="grid-3 grid-xs-1 grid-sm-1 book__img-container-small">
+            <div class="book__img-1">
               <img src="./img/pedicure.png" alt="pedicure" />
             </div>
             <div class="book__img-2">
               <img src="./img/pedicure.png" alt="pedicure" />
             </div>
-            <div class="book__img-2">
+            <div class="book__img-3">
               <img src="./img/pedicure.png" alt="pedicure" />
             </div>
           </div>
@@ -404,9 +455,15 @@
         </div>
         <div class="order__card">
           <div class="order__headline">
-            <h3 class="headline-head mbottom-15">Get 10% Off</h3>
-            <h3 class="headline-head mbottom-15">On Your First Order</h3>
-            <p class="headline-head-sub">By subscribing to newsletter</p>
+            <h3 class="headline headline-head mbottom-15 text-center">
+              Get 10% Off
+            </h3>
+            <h3 class="headline headline-head mbottom-15 text-center">
+              On Your First Order
+            </h3>
+            <p class="headline headline-head-sub text-center">
+              By subscribing to newsletter
+            </p>
           </div>
           <form class="order__form">
             <div class="order__form-container">
@@ -424,10 +481,10 @@
 
     <section class="featured">
       <div class="featured__headline">
-        <h3 class="headline-head mbottom-15">Our Products In Store</h3>
-        <p class="headline-head-sub">Top view in this week</p>
+        <h3 class="headline headline-head mbottom-15">Our Products In Store</h3>
+        <p class="headline headline-head-sub">Top view in this week</p>
       </div>
-      <div class="panel grid-4 container-small">
+      <div class="panel grid-4 grid-xs-1 grid-sm-1 grid-md-2 featured__grid">
         <div class="product__featured">
           <div class="product__featured-image">
             <img src="./img/wig 13.png" alt="" />
@@ -453,49 +510,51 @@
 
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__container-ida">
-          <h3 class="headline-tag mbottom-25">IDA'S BEAUTY</h3>
-          <p class="headline-3">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore voluptua. At vero eos.
-          </p>
-          <div class="footer__container-ida-links">
-            <a href="/">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="/">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
+        <div class="footer__container-1">
+          <div class="footer__container-ida">
+            <h3 class="headline headline-tag">IDA'S BEAUTY</h3>
+            <p class="headline headline-3">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore voluptua. At vero eos.
+            </p>
+            <div class="footer__container-ida-links">
+              <a href="/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__container-common">
+            <h3 class="headline headline-tag">Information Company</h3>
+
+            <p class="headline headline-3">About us</p>
+            <p class="headline headline-3">Our impact</p>
+            <p class="headline headline-3">Digital Payment</p>
+            <p class="headline headline-3">Member</p>
+            <p class="headline headline-3">Terms and Condition</p>
           </div>
         </div>
-        <div class="footer__container-grid grid-3">
+        <div class="footer__container-2">
           <div class="footer__container-common">
-            <h3 class="medium-bold mbottom-25">Information Company</h3>
-
-            <p class="headline-3">About us</p>
-            <p class="headline-3">Our impact</p>
-            <p class="headline-3">Digital Payment</p>
-            <p class="headline-3">Member</p>
-            <p class="headline-3">Terms and Condition</p>
+            <h3 class="headline headline-tag">Account</h3>
+            <p class="headline headline-3">FAQ</p>
+            <p class="headline headline-3">Track your order</p>
+            <p class="headline headline-3">Return & refund</p>
+            <p class="headline headline-3">Take our feedback</p>
+            <p class="headline headline-3">Contact us</p>
           </div>
           <div class="footer__container-common">
-            <h3 class="medium-bold mbottom-25">Account</h3>
-
-            <p class="headline-3">FAQ</p>
-            <p class="headline-3">Track your order</p>
-            <p class="headline-3">Return & refund</p>
-            <p class="headline-3">Take our feedback</p>
-            <p class="headline-3">Contact us</p>
-          </div>
-          <div class="footer__container-common">
-            <h3 class="medium-bold mbottom-25">Info</h3>
-            <p class="headline-3">terms & conditions</p>
-            <p class="headline-3">privacy policy</p>
-            <p class="headline-3">sitemap privacy</p>
-            <p class="headline-3">policy sitemap</p>
+            <h3 class="headline headline-tag">Info</h3>
+            <p class="headline headline-3">terms & conditions</p>
+            <p class="headline headline-3">privacy policy</p>
+            <p class="headline headline-3">sitemap privacy</p>
+            <p class="headline headline-3">policy sitemap</p>
           </div>
         </div>
       </div>
